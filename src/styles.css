@@ -1,25 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Be Vietnam Pro", sans-serif;
-}
+/* Root Variables */
 :root {
-  --primary-color: #605dc8;
-  --secondary-color: #8b89e6;
-  --accent-color: #e8e7fa;
-  --shadow-color: #e8e8e8;
+  --primary-color: #2e2e2e;
+  --secondary-color: #37c8ab;
+  --accent-color: #ff6f59;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --text-color: #ffffff;
+  --background-color: #1a1a1a;
+  --font-family: "Roboto", sans-serif;
+}
+
+/* Body Style */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Paragraph */
+p {
+  margin-bottom: 20px;
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: lighten(var(--secondary-color), 10%);
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 button.primary {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
+  background-color: var(--accent-color);
   color: white;
-  border-radius: 8px;
-  cursor: pointer;
+  border: 1px solid var(--accent-color);
 }
+
+button.primary:hover {
+  background-color: darken(var(--accent-color), 10%);
+  border-color: darken(var(--accent-color), 10%);
+}
+
+/* Inputs */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--shadow-color);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--accent-color);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Shadows */
+.shadow {
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 500px) and (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 499px) {
+  .container {
+    padding: 10px;
+  }
+}
+

@@ -1,40 +1,90 @@
-.results {
-  display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-  margin-top: 50px;
-  justify-content: space-around;
+/* Estilos para la sección principal */
+section {
+  margin-bottom: 50px;
+
+}
+
+/* Estilos para el formulario de búsqueda */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 input[type="search"] {
-  border: solid 1px var(--primary-color);
-  padding: 10px;
-  border-radius: 8px;
-  margin-right: 4px;
-  display: inline-block;
-  width: 30%;
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 12px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--text-color);
+  outline: none;
+  width: 70%;
+  max-width: 300px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-button {
-  padding: 10px;
-  border: solid 1px var(--primary-color);
-  background: var(--primary-color);
-  color: white;
-  border-radius: 8px;
+input[type="search"]::placeholder {
+  color: var(--primary-color);
 }
 
-@media (min-width: 500px) and (max-width: 768px) {
-  .results {
-    grid-template-columns: repeat(2, 1fr);
-  }
+input[type="search"]:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button.primary {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary-color);
+  color: rgb(179, 3, 3);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.primary:hover {
+  background-color: darken(var(--primary-color), 10%);
+  transform: translateY(-2px);
+}
+
+/* Estilos para la sección de resultados */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Estilos para cada elemento de la lista de resultados */
+.results .listing-photo {
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 15px; 
+}
+
+.results .listing-photo:hover {
+  cursor: pointer; 
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-out;
+}
+
+/* Media queries para ajustes responsivos */
+@media (max-width: 768px) {
   input[type="search"] {
-    width: 70%;
+    width: 100%;
+    max-width: none;
   }
 }
 
-@media (max-width: 499px) {
-  .results {
-    grid-template-columns: 1fr;
+@media (max-width: 500px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  input[type="search"] {
+    margin-bottom: 10px;
   }
 }

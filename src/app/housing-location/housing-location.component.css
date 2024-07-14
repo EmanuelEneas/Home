@@ -1,31 +1,67 @@
 .listing {
-  background: var(--accent-color);
-  border-radius: 30px;
-  padding-bottom: 30px;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  cursor:pointer;
 }
+
+.listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
 .listing-heading {
   color: var(--primary-color);
-  padding: 10px 20px 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
 .listing-photo {
   height: 250px;
   width: 100%;
   object-fit: cover;
-  border-radius: 30px 30px 0 0;
-}
-.listing-location {
-  padding: 10px 20px 20px 20px;
-}
-.listing-location::before {
-  content: url("/assets/location-pin.svg") / "";
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 10px;
+  filter: grayscale(0.5) brightness(0.8);
+  transition: filter 0.3s ease-out;
 }
 
-section.listing a {
-  padding-left: 20px;
-  text-decoration: none;
-  color: var(--primary-color);
+.listing-photo:hover {
+  filter: none;
 }
-section.listing a::after {
-  content: "\203A";
-  margin-left: 5px;
+
+.listing-location {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-size: 16px;
+}
+
+.listing-location::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/location-pin.svg");
+  background-size: cover;
+  margin-right: 10px;
+  filter: invert(1);
+}
+
+.listing-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.listing-link:hover {
+  background-color: darken(var(--primary-color), 10%);
 }
