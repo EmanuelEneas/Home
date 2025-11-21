@@ -1,22 +1,19 @@
-Homesapp
-Este proyecto fue generado con Angular CLI versión 18.0.2.
+Homesapp es una aplicación construida con Angular 18 que sigue una arquitectura modular, escalable y orientada a componentes.
+El proyecto fue generado utilizando Angular CLI 18.0.2, lo que asegura una estructura estándar, herramientas robustas y un flujo de trabajo eficiente para desarrollo, testing y despliegue.
 
-Servidor de desarrollo
-Ejecuta ng serve para levantar un servidor de desarrollo. Navega a http://localhost:4200/. La aplicación se recargará automáticamente si realizas cambios en los archivos fuente.
+La aplicación está preparada para crecer fácilmente, integrando componentes reutilizables, servicios inyectables y rutas configurables. Además, incluye soporte para pruebas unitarias con Karma y pruebas end-to-end mediante herramientas compatibles como Cypress o Playwright.
 
-Generación de código
-Utiliza ng generate component nombre-componente para generar un nuevo componente. También puedes usar ng generate directive|pipe|service|class|guard|interface|enum|module.
+El entorno de desarrollo ofrece recarga automática, lo cual facilita un ciclo de trabajo rápido y optimizado.
+La estructura generada permite mantener el código ordenado, comprensible y alineado con las mejores prácticas del ecosistema Angular.
 
-Construcción
-Ejecuta ng build para compilar el proyecto. Los artefactos de construcción se almacenarán en el directorio dist/.
+Esta base convierte a Homesapp en un proyecto ideal para:
 
-Ejecución de pruebas unitarias
-Ejecuta ng test para ejecutar las pruebas unitarias mediante Karma.
+Desarrollos SPA modernos
 
-Ejecución de pruebas end-to-end
-Ejecuta ng e2e para ejecutar pruebas end-to-end mediante una plataforma de tu elección. Antes de utilizar este comando, debes agregar un paquete que implemente capacidades de pruebas end-to-end.
+Prácticas y aprendizaje de Angular
 
-Ayuda adicional
-Para obtener más ayuda sobre Angular CLI, utiliza ng help o visita la página de Referencia de Comandos y Visión General de Angular CLI.
+Implementar funcionalidades escalables (formularios, listas, filtrados, etc.)
 
-Este README proporciona una guía básica sobre cómo desarrollar, compilar y probar el proyecto Homesapp utilizando Angular CLI.
+Trabajo colaborativo en equipos front-end
+
+El proyecto se compila fácilmente para producción mediante ng build, generando artefactos optimizados en el directorio dist/, listos para ser servidos en cualquier hosting o backend compatible
