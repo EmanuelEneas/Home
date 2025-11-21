@@ -1,19 +1,26 @@
-Homesapp es una aplicación construida con Angular 18 que sigue una arquitectura modular, escalable y orientada a componentes.
-El proyecto fue generado utilizando Angular CLI 18.0.2, lo que asegura una estructura estándar, herramientas robustas y un flujo de trabajo eficiente para desarrollo, testing y despliegue.
+# 🏡 Homesapp – Buscador de Ubicaciones de Vivienda
 
-La aplicación está preparada para crecer fácilmente, integrando componentes reutilizables, servicios inyectables y rutas configurables. Además, incluye soporte para pruebas unitarias con Karma y pruebas end-to-end mediante herramientas compatibles como Cypress o Playwright.
+Homesapp es una aplicación desarrollada con **Angular 18** que permite explorar distintas opciones de vivienda, filtrarlas por ciudad y ver información detallada de cada ubicación.  
+El proyecto usa **standalone components**, servicios centralizados y navegación mediante **Angular Router**, siguiendo buenas prácticas modernas del framework.
 
-El entorno de desarrollo ofrece recarga automática, lo cual facilita un ciclo de trabajo rápido y optimizado.
-La estructura generada permite mantener el código ordenado, comprensible y alineado con las mejores prácticas del ecosistema Angular.
+---
 
-Esta base convierte a Homesapp en un proyecto ideal para:
+## ✨ Características principales
 
-Desarrollos SPA modernos
+- **Listado completo de viviendas** obtenido desde un backend local (JSON Server).
+- **Filtro dinámico por ciudad** en el Home.
+- **Vista de detalles** con información completa de cada ubicación.
+- **Formulario reactivo** para enviar una aplicación de vivienda.
+- **Validaciones en tiempo real** (required + email pattern).
+- **Standalone Components** (sin módulos).
+- **Estructuras modernas de plantilla**: `@if`, `@for`, `track`.
+- **HousingService** con métodos dedicados:
+  - Obtener todas las viviendas.
+  - Obtener una vivienda por ID.
+  - Simular envío de aplicación.
+- **Arquitectura limpia y escalable**, ideal para estudios y proyectos reales.
 
-Prácticas y aprendizaje de Angular
+---
 
-Implementar funcionalidades escalables (formularios, listas, filtrados, etc.)
+## 🧭 Estructura general del proyecto
 
-Trabajo colaborativo en equipos front-end
-
-El proyecto se compila fácilmente para producción mediante ng build, generando artefactos optimizados en el directorio dist/, listos para ser servidos en cualquier hosting o backend compatible
